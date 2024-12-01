@@ -6,6 +6,14 @@ https://flickity.metafizzy.co
   margin-bottom: 10vh;
 }
 
+.carousel-cell {
+  width: fit-content;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel img {
   display: block;
   height: 258px;

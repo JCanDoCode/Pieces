@@ -233,11 +233,42 @@ div {
 .puzzle1 {
     width: 50vh;
     height: 50vh;
-    background: url(../images/puzzle.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 20px;
+
+    div {
+        display: grid;
+        grid-template-columns: 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh;
+        grid-template-rows: 6.25vh;
+
+        &:nth-of-type(odd) {
+            div:nth-of-type(odd) {
+                background-color: #A06535;
+            }
+            div:nth-of-type(even) {
+                background-color: #FFFFAE;
+            }
+        }
+
+        div {
+            position: relative;
+
+            p {
+                position: absolute;
+                bottom: 0.5vh;
+                right: 1vh;
+                color: rgb(44, 44, 44);
+            }
+        }
+        div:nth-of-type(even) {
+            background-color: #A06535;
+        }
+        div:nth-of-type(odd) {
+            background-color: #FFFFAE;
+        }
+    }
 }
 
 /* openings --------------------------------------------------------------------------------- */
@@ -604,11 +635,42 @@ p {
     .puzzle1 {
         width: 60vh;
         height: 60vh;
-        background: url(../images/puzzle.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         margin-bottom: 20px;
+
+        div {
+            display: grid;
+            grid-template-columns: 7.5vh 7.5vh 7.5vh 7.5vh 7.5vh 7.5vh 7.5vh 7.5vh;
+            grid-template-rows: 7.5vh;
+    
+            &:nth-of-type(odd) {
+                div:nth-of-type(odd) {
+                    background-color: #A06535;
+                }
+                div:nth-of-type(even) {
+                    background-color: #FFFFAE;
+                }
+            }
+    
+            div {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    bottom: 0.5vh;
+                    right: 1vh;
+                    color: rgb(44, 44, 44);
+                }
+            }
+            div:nth-of-type(even) {
+                background-color: #A06535;
+            }
+            div:nth-of-type(odd) {
+                background-color: #FFFFAE;
+            }
+        }
     }
 
     /* openings --------------------------------------------------------------------------------- */
@@ -963,11 +1025,42 @@ p {
     .puzzle1 {
         width: 75vh;
         height: 75vh;
-        background: url(../images/puzzle.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         margin-bottom: 20px;
+
+        div {
+            display: grid;
+            grid-template-columns: 9.375vh 9.375vh 9.375vh 9.375vh 9.375vh 9.375vh 9.375vh 9.375vh;
+            grid-template-rows: 9.375vh;
+
+            &:nth-of-type(odd) {
+                div:nth-of-type(odd) {
+                    background-color: #A06535;
+                }
+                div:nth-of-type(even) {
+                    background-color: #FFFFAE;
+                }
+            }
+
+            div {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    bottom: 0.5vh;
+                    right: 1vh;
+                    color: rgb(44, 44, 44);
+                }
+            }
+            div:nth-of-type(even) {
+                background-color: #A06535;
+            }
+            div:nth-of-type(odd) {
+                background-color: #FFFFAE;
+            }
+        }
     }
 
     /* openings --------------------------------------------------------------------------------- */

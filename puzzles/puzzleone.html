@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pieces</title>
+    <link rel="icon" type="image/x-icon" href="../images/pieces_logo.png">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/flickity.css" media="screen">
@@ -28,15 +29,94 @@
         <div class="puzzlepage-flexchild">
             <h2>Try to solve it!</h2>
             <div class="puzzle-center">
-                <div class="puzzle1"></div>
+                <div class="puzzle1" id="puzzle1">
+                    <div>
+                        <div id="a8"></div>
+                        <div id="b8"></div>
+                        <div id="c8"></div>
+                        <div id="d8"></div>
+                        <div id="e8"></div>
+                        <div id="f8"></div>
+                        <div id="g8"></div>
+                        <div id="h8"><p>8</p></div>
+                    </div>
+                    <div>
+                        <div id="a7"></div>
+                        <div id="b7"></div>
+                        <div id="c7"></div>
+                        <div id="d7"></div>
+                        <div id="e7"></div>
+                        <div id="f7"></div>
+                        <div id="g7"></div>
+                        <div id="h7"><p>7</p></div>
+                    </div>
+                    <div>
+                        <div id="a6"></div>
+                        <div id="b6"></div>
+                        <div id="c6"></div>
+                        <div id="d6"></div>
+                        <div id="e6"></div>
+                        <div id="f6"></div>
+                        <div id="g6"></div>
+                        <div id="h6"><p>6</p></div>
+                    </div>
+                    <div>
+                        <div id="a5"></div>
+                        <div id="b5"></div>
+                        <div id="c5"></div>
+                        <div id="d5"></div>
+                        <div id="e5"></div>
+                        <div id="f5"></div>
+                        <div id="g5"></div>
+                        <div id="h5"><p>5</p></div>
+                    </div>
+                    <div>
+                        <div id="a4"></div>
+                        <div id="b4"></div>
+                        <div id="c4"></div>
+                        <div id="d4"></div>
+                        <div id="e4"></div>
+                        <div id="f4"></div>
+                        <div id="g4"></div>
+                        <div id="h4"><p>4</p></div>
+                    </div>
+                    <div>
+                        <div id="a3"></div>
+                        <div id="b3"></div>
+                        <div id="c3"></div>
+                        <div id="d3"></div>
+                        <div id="e3"></div>
+                        <div id="f3"></div>
+                        <div id="g3"></div>
+                        <div id="h3"><p>3</p></div>
+                    </div>
+                    <div>
+                        <div id="a2"></div>
+                        <div id="b2"></div>
+                        <div id="c2"></div>
+                        <div id="d2"></div>
+                        <div id="e2"></div>
+                        <div id="f2"></div>
+                        <div id="g2"></div>
+                        <div id="h2"><p>2</p></div>
+                    </div>
+                    <div>
+                        <div id="a1"><p>a</p></div>
+                        <div id="b1"><p>b</p></div>
+                        <div id="c1"><p>c</p></div>
+                        <div id="d1"><p>d</p></div>
+                        <div id="e1"><p>e</p></div>
+                        <div id="f1"><p>f</p></div>
+                        <div id="g1"><p>g</p></div>
+                        <div id="h1"><p>h1</p></div>
+                    </div>
+                </div>
             </div>
             <h3>Try more puzzles!</h3>
-            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
-                <a href="../puzzles/puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
-                <a href="../puzzles/puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
-                <a href="../puzzles/puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
-                <a href="../puzzles/puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
-                <a href="../puzzles/puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
+            <div class="carousel">
+                <div class="carousel-cell">
+                    <a href="./puzzleone.html"><img src="../images/puzzle.png" alt="Puzzle 1"/></a>
+                </div>
             </div>
         </div>
     </div>
@@ -44,15 +124,14 @@
         Some descriptive content written by AI
     </footer>
     <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="../js/flickity.js"></script>
     <script>
-        var elem = document.querySelector('.main-carousel');
+        var elem = document.querySelector('.carousel');
         var flkty = new Flickity( elem, {
             // options
-            cellAlign: 'left',
-            contain: true,
-            freeScroll: true,
-            wrapAround: true,
+            imagesLoaded: true,
+            percentPosition: false,
         });
     </script>
 </body>

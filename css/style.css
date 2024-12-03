@@ -233,35 +233,116 @@ div {
 .puzzle1 {
     width: 50vh;
     height: 50vh;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-bottom: 20px;
 
     div {
         display: grid;
         grid-template-columns: 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh 6.25vh;
         grid-template-rows: 6.25vh;
+        border-radius: 5px;
 
+        &:nth-of-type(1) {
+            div:nth-of-type(4)::after, div:nth-of-type(8)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/rook.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert();
+            }
+            div:nth-of-type(2)::after, div:nth-of-type(7)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/knight.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert();
+            }
+            div:nth-of-type(3)::after, div:nth-of-type(6)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/bishop.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert();
+            }
+            div:nth-of-type(4)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/queen.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert();
+            }
+            div:nth-of-type(5)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/king.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert();
+            }
+        }
         &:nth-of-type(2) {
             div::after {
                 content: "";
-                margin: 5px;
+                margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
+                background-position: center;
+                background-repeat: no-repeat;
                 filter: invert();
+            }
+        }
+        &:nth-of-type(8) {
+            div:nth-of-type(1)::after, div:nth-of-type(8)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/rook.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(2)::after, div:nth-of-type(7)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/knight.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(3)::after, div:nth-of-type(6)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/bishop.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(4)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/queen.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(5)::after {
+                content: "";
+                margin: 1vh;
+                background-image: url("../svg/king.svg");
+                background-position: center;
+                background-repeat: no-repeat;
             }
         }
         &:nth-of-type(7) {
             div::after {
                 content: "";
-                margin: 5px;
+                margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
+                background-position: center;
+                background-repeat: no-repeat;
             }
         }
 
         div {
             position: relative;
-            cursor: grab;
+            cursor: pointer;
 
             p {
                 position: absolute;

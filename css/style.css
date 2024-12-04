@@ -40,6 +40,7 @@ footer {
 div {
     width: 100%;
 }
+
 /* nav classes ---------------------------------------------------------------------------------- */
 .hamburger-icon {
     cursor: pointer;
@@ -214,6 +215,7 @@ div {
         text-align: center;
     }
 }
+
 /* puzzle page ------------------------------------------------------ */
 .puzzlepage-flex {
     width: 90%;
@@ -242,107 +244,110 @@ div {
         border-radius: 5px;
 
         &:nth-of-type(1) {
-            div:nth-of-type(4)::after, div:nth-of-type(8)::after {
+            div::after {
                 content: "";
-                margin: 1vh;
-                background-image: url("../svg/rook.svg");
                 background-position: center;
                 background-repeat: no-repeat;
-                filter: invert();
-            }
-            div:nth-of-type(2)::after, div:nth-of-type(7)::after {
-                content: "";
-                margin: 1vh;
-                background-image: url("../svg/knight.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-                filter: invert();
-            }
-            div:nth-of-type(3)::after, div:nth-of-type(6)::after {
-                content: "";
-                margin: 1vh;
-                background-image: url("../svg/bishop.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-                filter: invert();
-            }
-            div:nth-of-type(4)::after {
-                content: "";
-                margin: 1vh;
-                background-image: url("../svg/queen.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-                filter: invert();
             }
             div:nth-of-type(5)::after {
-                content: "";
                 margin: 1vh;
-                background-image: url("../svg/king.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-                filter: invert();
+                background-image: url("../svg/queen.svg");
             }
         }
         &:nth-of-type(2) {
             div::after {
                 content: "";
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(2)::after, div:nth-of-type(6)::after, div:nth-of-type(8)::after {
                 margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
-                background-position: center;
-                background-repeat: no-repeat;
                 filter: invert();
+                cursor: pointer;
             }
-        }
-        &:nth-of-type(8) {
-            div:nth-of-type(1)::after, div:nth-of-type(8)::after {
-                content: "";
+            div:nth-of-type(4)::after {
                 margin: 1vh;
                 background-image: url("../svg/rook.svg");
-                background-position: center;
-                background-repeat: no-repeat;
+                filter: invert();
+                cursor: pointer;
             }
-            div:nth-of-type(2)::after, div:nth-of-type(7)::after {
-                content: "";
+            div:nth-of-type(7)::after {
                 margin: 1vh;
-                background-image: url("../svg/knight.svg");
+                background-image: url("../svg/king.svg");
+                filter: invert();
+                cursor: pointer;
+            }
+        }
+        &:nth-of-type(3) {
+            div::after {
+                content: "";
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            div:nth-of-type(3)::after, div:nth-of-type(6)::after {
+            div:nth-of-type(1)::after, div:nth-of-type(7)::after {
+                margin: 1.5vh;
+                background-image: url("../svg/pawn.svg");
+                filter: invert();
+                cursor: pointer;
+            }
+        }
+        &:nth-of-type(4) {
+            div::after {
                 content: "";
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            div:nth-of-type(2)::after {
+                margin: 1vh;
+                background-image: url("../svg/queen.svg");
+                filter: invert();
+                cursor: pointer;
+            }
+            div:nth-of-type(7)::after {
                 margin: 1vh;
                 background-image: url("../svg/bishop.svg");
+                cursor: pointer;
+            }
+            div:nth-of-type(8)::after {
+                margin: 1.5vh;
+                background-image: url("../svg/pawn.svg");
+                cursor: pointer;
+            }
+        }
+        &:nth-of-type(5) {
+            div::after {
+                content: "";
                 background-position: center;
                 background-repeat: no-repeat;
             }
             div:nth-of-type(4)::after {
-                content: "";
                 margin: 1vh;
-                background-image: url("../svg/queen.svg");
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(5)::after {
-                content: "";
-                margin: 1vh;
-                background-image: url("../svg/king.svg");
-                background-position: center;
-                background-repeat: no-repeat;
+                background-image: url("../svg/bishop.svg");
+                filter: invert();
+                cursor: pointer;
             }
         }
-        &:nth-of-type(7) {
+        &:nth-of-type(6) {
             div::after {
                 content: "";
-                margin: 1.5vh;
-                background-image: url("../svg/pawn.svg");
                 background-position: center;
                 background-repeat: no-repeat;
+            }
+            div:nth-of-type(6)::after {
+                margin: 1.5vh;
+                background-image: url("../svg/pawn.svg");
+                cursor: pointer;
+            }
+            div:nth-of-type(7)::after {
+                margin: 1.5vh;
+                background-image: url("../svg/king.svg");
+                cursor: pointer;
             }
         }
 
         div {
             position: relative;
-            cursor: pointer;
 
             p {
                 position: absolute;
@@ -353,17 +358,17 @@ div {
         }
 
         div:nth-of-type(even) {
-            background-color: #A06535;
+            background-color: #FFFFAE;
         }
         div:nth-of-type(odd) {
-            background-color: #FFFFAE;
+            background-color: #A06535;
         }
         &:nth-of-type(odd) {
             div:nth-of-type(odd) {
-                background-color: #A06535;
+                background-color: #FFFFAE;
             }
             div:nth-of-type(even) {
-                background-color: #FFFFAE;
+                background-color: #A06535;
             }
         }
     }

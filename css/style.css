@@ -264,19 +264,16 @@ div {
                 margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
                 filter: invert();
-                cursor: pointer;
             }
             div:nth-of-type(4)::after {
                 margin: 1vh;
                 background-image: url("../svg/rook.svg");
                 filter: invert();
-                cursor: pointer;
             }
             div:nth-of-type(7)::after {
                 margin: 1vh;
                 background-image: url("../svg/king.svg");
                 filter: invert();
-                cursor: pointer;
             }
         }
         &:nth-of-type(3) {
@@ -289,7 +286,6 @@ div {
                 margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
                 filter: invert();
-                cursor: pointer;
             }
         }
         &:nth-of-type(4) {
@@ -302,17 +298,14 @@ div {
                 margin: 1vh;
                 background-image: url("../svg/queen.svg");
                 filter: invert();
-                cursor: pointer;
             }
             div:nth-of-type(7)::after {
                 margin: 1vh;
                 background-image: url("../svg/bishop.svg");
-                cursor: pointer;
             }
             div:nth-of-type(8)::after {
                 margin: 1.5vh;
                 background-image: url("../svg/pawn.svg");
-                cursor: pointer;
             }
         }
         &:nth-of-type(5) {
@@ -325,7 +318,6 @@ div {
                 margin: 1vh;
                 background-image: url("../svg/bishop.svg");
                 filter: invert();
-                cursor: pointer;
             }
         }
         &:nth-of-type(6) {
@@ -334,15 +326,9 @@ div {
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            div:nth-of-type(6)::after {
-                margin: 1.5vh;
-                background-image: url("../svg/pawn.svg");
-                cursor: pointer;
-            }
             div:nth-of-type(7)::after {
                 margin: 1.5vh;
                 background-image: url("../svg/king.svg");
-                cursor: pointer;
             }
         }
 
@@ -371,6 +357,9 @@ div {
                 background-color: #A06535;
             }
         }
+    }
+    .playable {
+        cursor: pointer;
     }
 }
 

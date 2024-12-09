@@ -243,95 +243,6 @@ div {
         grid-template-rows: 6.25vh;
         border-radius: 5px;
 
-        &:nth-of-type(1) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(5)::after {
-                margin: 1vh;
-                background-image: url("../svg/queen.svg");
-            }
-        }
-        &:nth-of-type(2) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(2)::after, div:nth-of-type(6)::after, div:nth-of-type(8)::after {
-                margin: 1.5vh;
-                background-image: url("../svg/pawn.svg");
-                filter: invert();
-            }
-            div:nth-of-type(4)::after {
-                margin: 1vh;
-                background-image: url("../svg/rook.svg");
-                filter: invert();
-            }
-            div:nth-of-type(7)::after {
-                margin: 1vh;
-                background-image: url("../svg/king.svg");
-                filter: invert();
-            }
-        }
-        &:nth-of-type(3) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(1)::after, div:nth-of-type(7)::after {
-                margin: 1.5vh;
-                background-image: url("../svg/pawn.svg");
-                filter: invert();
-            }
-        }
-        &:nth-of-type(4) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(2)::after {
-                margin: 1vh;
-                background-image: url("../svg/queen.svg");
-                filter: invert();
-            }
-            div:nth-of-type(7)::after {
-                margin: 1vh;
-                background-image: url("../svg/bishop.svg");
-            }
-            div:nth-of-type(8)::after {
-                margin: 1.5vh;
-                background-image: url("../svg/pawn.svg");
-            }
-        }
-        &:nth-of-type(5) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(4)::after {
-                margin: 1vh;
-                background-image: url("../svg/bishop.svg");
-                filter: invert();
-            }
-        }
-        &:nth-of-type(6) {
-            div::after {
-                content: "";
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            div:nth-of-type(7)::after {
-                margin: 1.5vh;
-                background-image: url("../svg/king.svg");
-            }
-        }
-
         div {
             position: relative;
 
@@ -358,8 +269,65 @@ div {
             }
         }
     }
-    .playable {
+    div::after {
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .pawn::after {
+        content: "";
+        margin: 1.5vh;
+        background-image: url("../svg/pawn.svg");
+    }
+    .bishop::after {
+        content: "";
+        margin: 1vh;
+        background-image: url("../svg/bishop.svg");
+    }
+    .rook::after {
+        content: "";
+        margin: 1vh;
+        background-image: url("../svg/rook.svg");
+    }
+    .queen::after {
+        content: "";
+        margin: 1vh;
+        background-image: url("../svg/queen.svg");
+    }
+    .king::after {
+        content: "";
+        margin: 1vh;
+        background-image: url("../svg/king.svg");
+    }
+    .black::after {
+        filter: invert();
+    }
+    .white {
         cursor: pointer;
+    }
+    .played-from::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffe865;
+    }
+    .played-to::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffca38;
+    }
+    .legal-move::before {
+        content: "";
+        position: absolute;
+        z-index: 99;
+        width: 40%;
+        height: 40%;
+        align-self: center;
+        justify-self: center;
+        border-radius: 100px;
+        background-color: grey;
     }
 }
 
